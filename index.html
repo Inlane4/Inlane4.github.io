@@ -155,19 +155,29 @@
         </ul>
         <ul id="results">
             <li class="results-inner">
-                <p>測驗結果，你是</p>
-                <h1></h1>
+                <!-- <p>測驗結果，你是</p> -->
+                <!-- <h1></h1> -->
                 <p class="desc"></p>
             </li>
             <div class="back_to_quiz" onclick="history.go(0);">
-                <span>再做一次測驗</span>
+                <img src="/img/again.png" alt="">
+                <span>again</span>
+            </div>
+            <div class="share share_fb">
+                <!-- <img src="/img/FB.png" alt=""> -->
+                <a href="https://www.facebook.com/sharer.php?u=https://inlane4.github.io/img/EA.png" target="_blank"
+                    id="fb">
+                </a>
+            </div>
+            <div class="share share_link" onclick="copy();">
+                <img src="/img/DP.png" alt="">
+                <!-- <span>copy</span> -->
             </div>
         </ul>
     </div>
     <!-- partial -->
     <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="js/script.js"></script>
-
 </body>
 
 </html>

@@ -2,19 +2,23 @@
 var resultOptions = [
   {
     title: "A人格",
-    desc: '<p>Here, have an Archer</p><img src="https://i.imgur.com/tXTjD9k.jpg"/>',
+    desc: '<img src="../img/EA.png" alt="">',
+    a: "<a href='https://www.facebook.com/sharer.php?u=https://inlane4.github.io/img/EA.png' target='_blank' id='fb'>"
   },
   {
     title: "B人格",
-    desc: '<p>Here, have an Archer</p><img src="https://i.imgur.com/dipkE0v.jpg"/>',
+    desc: '<img src="../img/EB.png" alt="">',
+    a:"<a href='https://www.facebook.com/sharer.php?u=https://inlane4.github.io/img/EB.png' target='_blank' id='fb'></a>"
   },
   {
     title: "C人格",
-    desc: '<p>Here, have an Archer</p><img src="https://i.imgur.com/WXox0Yv.jpg"/>',
+    desc: '<img src="../img/EC.png" alt="">',
+    a:"<a href='https://www.facebook.com/sharer.php?u=https://inlane4.github.io/img/EC.png' target='_blank' id='fb'></a>"
   },
   {
     title: "D人格",
-    desc: '<p>Here, have an Archer</p><img src="https://i.imgur.com/NH5cunw.png"/>',
+    desc: '<img src="../img/ED.png" alt="">',
+    a:"<a href='https://www.facebook.com/sharer.php?u=https://inlane4.github.io/img/ED.png' target='_blank' id='fb'></a>"
   },
 ];
 
@@ -75,7 +79,8 @@ function calcResults(totalScore) {
   // only update the results div if all questions have been answered
   if (quizSteps.find(".active").length == quizSteps.length) {
     var resultsTitle = $("#results h1"),
-      resultsDesc = $("#results .desc");
+      resultsDesc = $("#results .desc"),
+      resultsLink = $("#results .share_fb");
 
     // calc lowest possible score
     var lowestScoreArray = $("#quizzie .low-value").map(function () {
@@ -108,6 +113,9 @@ function calcResults(totalScore) {
         resultsDesc.replaceWith(
           "<p class='desc'>" + resultOptions[n].desc + "</p>"
         );
+        resultsLink.replaceWith(
+          "<div class='share share_fb'><img src='/img/FB.png' alt=''>" + resultOptions[n].a + "</div>"
+        );
         return;
       } else {
         n++;
@@ -130,4 +138,15 @@ function change4(){
   $("body").css("background-color","#E6F2F7");
 }
 
+// function copy(){
+//   var url = window.location.href;
+//   copyUrl(url);
+// }
+
+function copy() {
+  const URL = window.location.href;
+  navigator.clipboard.writeText(URL)
+    .then(() => alert('已複製網址'))
+    .catch(error => console.log(error))
+}
 
