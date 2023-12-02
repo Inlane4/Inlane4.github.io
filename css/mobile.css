@@ -1,0 +1,42 @@
+@media (max-width: 768px) {
+  :root {
+    font-size: 12px;
+  }
+  .mb_show {
+    display: block;
+  }
+  #quizzie {
+    /* width: 90%; */
+    height: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #quizzie .question-wrap {
+    font-size: 0.8rem;
+  }
+  #quizzie ul li.quiz-answer {
+    max-width: 600px;
+  }
+  #quizzie .answer-wrap {
+    width: 100%;
+    margin: auto;
+  }
+  #quizzie ul li.quiz-answer .answer-wrap img {
+    width: 106%;
+    left: -3%;
+  }
+  .quiz-step .quiz-answer.ans1 {
+    bottom: 28%;
+  }
+  .quiz-step .quiz-answer.ans2 {
+    bottom: 20%;
+  }
+  .quiz-step .quiz-answer.ans3 {
+    bottom: 12%;
+  }
+  .quiz-step .quiz-answer.ans4 {
+    bottom: 4%;
+  }
+}

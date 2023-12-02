@@ -1,0 +1,195 @@
+@import url(https://fonts.googleapis.com/css?family=Satisfy|Pathway+Gothic+One);
+/* Defaults */
+:root {
+  font-size: 14px;
+}
+html,
+body,
+#quizzie {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  letter-spacing: 0.1rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #e6f2f7;
+  color: #fff;
+}
+
+.mb_show {
+  display: none;
+}
+
+h1 {
+  font-family: "Satisfy", "cursive";
+  font-size: 2.5em;
+}
+
+h2,
+p {
+  font-family: "Pathway Gothic One", "sans-serif";
+  font-size: 2em;
+}
+
+h1,
+h2,
+p {
+  text-align: center;
+  display: block;
+  width: auto;
+  margin: 1%;
+}
+
+#quizzie {
+  /* padding: 3% 0; */
+  /* Individual Steps/Sections */
+  /* Content */
+}
+#quizzie ul {
+  list-style: none;
+  display: block;
+  width: auto;
+  /* max-width: 800px; */
+  height: 100vh;
+  margin: 0% auto;
+  padding: 0 0%;
+  overflow: auto;
+  display: none;
+  /* Step Questions and Answer Options */
+}
+#quizzie ul.current {
+  display: block;
+}
+#quizzie ul li {
+  display: inline-block;
+  width: 49%;
+  text-align: center;
+}
+/* #quizzie .all_answers_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+#quizzie ul li.quiz-answer {
+  cursor: pointer;
+  width: 100%;
+  max-width: 350px;
+}
+#quizzie ul li.question,
+#quizzie ul li.results-inner {
+  display: block;
+  float: none;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  /* margin-bottom: 2%; */
+}
+#quizzie ul li.results-inner {
+  padding: 5% 2%;
+}
+#quizzie ul li.results-inner img {
+  width: 250px;
+}
+#quizzie ul li:last-child {
+  margin-right: 0;
+}
+#quizzie .question-wrap,
+#quizzie .answer-wrap {
+  display: block;
+  padding: 1%;
+  margin: 1em 10%;
+}
+#quizzie .answer-wrap {
+  margin: 0;
+  font-size: 0.6rem;
+  color: #2e7c7e;
+  font-weight: bold;
+}
+#quizzie .answer-wrap .answer-text {
+  padding: 5px;
+  margin: 0;
+}
+#quizzie .question-wrap {
+  width: 100%;
+  max-width: 720px;
+  margin: auto;
+  text-align: justify;
+  font-size: 0.9rem;
+}
+#quizzie .question-wrap .item {
+  font-size: 4rem;
+  text-align: center;
+  font-weight: bold;
+}
+#quizzie .answer-wrap {
+  transition: background-color 0.5s ease;
+  /* border: solid 2px red; */
+}
+#quizzie .answer-wrap:hover {
+  /* background: rgb(143, 218, 220); */
+}
+
+#results .back_to_quiz {
+  cursor: pointer;
+  width: 100%;
+  margin: 40px auto;
+  text-align: center;
+  padding: 10px 0;
+  max-width: 800px;
+  background-color: rgba(237, 237, 237, 0.8);
+  color: #2e7c7e;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* question */
+.quiz-step {
+  text-align: center;
+  position: relative;
+}
+.quiz-step .bg_img {
+  width: auto;
+  height: 100vh;
+  /* position: fixed; */
+}
+
+.quiz-step .quiz-answer {
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 800px;
+}
+#quizzie ul li.quiz-answer .answer-wrap {
+  position: relative;
+  height: 45px;
+}
+#quizzie ul li.quiz-answer .answer-wrap img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.quiz-step .quiz-answer.ans1 {
+  bottom: 27%;
+}
+.quiz-step .quiz-answer.ans2 {
+  bottom: 19%;
+}
+.quiz-step .quiz-answer.ans3 {
+  bottom: 11%;
+}
+.quiz-step .quiz-answer.ans4 {
+  bottom: 3%;
+}
+.question-wrap {
+  width: 100%;
+}
