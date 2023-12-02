@@ -232,6 +232,12 @@ p {
   top: 0;
   left: 0;
 }
+
+#quizzie .quiz-step.step0 li.quiz-answer {
+  width: 80%;
+  max-width: 300px;
+  bottom: 33%;
+}
 .quiz-step .quiz-answer.ans1 {
   bottom: 27%;
 }

@@ -138,15 +138,10 @@ function change4(){
   $("body").css("background-color","#E6F2F7");
 }
 
-// function copy(){
-//   var url = window.location.href;
-//   copyUrl(url);
-// }
-
 function copy() {
   const URL = window.location.href;
   navigator.clipboard.writeText(URL)
-    .then(() => alert('已複製網址'))
+    .then(() => alert('已複製網址！'))
     .catch(error => console.log(error))
 }
 
